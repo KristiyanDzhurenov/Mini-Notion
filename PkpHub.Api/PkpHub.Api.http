@@ -1,0 +1,6 @@
+@PkpHub.Api_HostAddress = http://localhost:5155
+
+GET {{PkpHub.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
