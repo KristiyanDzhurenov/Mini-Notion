@@ -29,5 +29,34 @@ const addBlock = async () => {
 };
 
 // Триене на блок
+const deleteBlock = async (id: number) => {
+    await api.delete(`/blocks/${id}`);
+    blocks.value = blocks.value.filter((b) => b.id !== id);
+};
 
+onMounted(() => {
+    loadBlocks();
+});                                            
+</script>
+
+<template>
+    <div>
+        <div>
+            <h2>Blocks</h2>
+        </div>
+        <input v-model="newContent" placeholder="New block..." />
+        <button @click="addBlock">Add</button>
+
+        <ul>
+            <li v-for="block in blocks" :key="block.id">
+                {{ block.content }}
+                <button @click="deleteBlock(block.id)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</template>
+
+
+<script lang="ts">
+export default {};
 </script>

@@ -1,3 +1,4 @@
+Ето ми го App.vue къде да го сложа точно от седма стъпка?:
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import type { DefineComponent } from 'vue'
@@ -15,6 +16,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/pages">Pages</RouterLink>
+          <RouterLink to="/blocks">Blocks</RouterLink>
         </nav>
       </div>
     </header>

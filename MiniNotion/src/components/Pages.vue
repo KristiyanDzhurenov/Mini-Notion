@@ -25,7 +25,7 @@ const createPage = async () => {
 
 // Изтрива страница
 const deletePage = async (id: number) => {
-    await api.delete('/pages/${id}');
+    await api.delete(`/pages/${id}`);
     pages.value = pages.value.filter((p) => p.id !== id);
 };
 
@@ -44,10 +44,16 @@ onMounted(() => {
         </div>
 
         <ul>
-            <li v-for="page in pages" :key="page.id">
+            <li v-for="page in pages" :key="page.id"
+                @click="$emit('selectPage', page.id)"
+                style="cursor: pointer;">
                 {{ page.title }}
                 <button @click="deletePage(page.id)">Delete</button>
             </li>
         </ul>
     </div>
 </template>
+
+<script lang="ts">
+export default {};
+</script>
