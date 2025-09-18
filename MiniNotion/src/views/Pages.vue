@@ -1,29 +1,5 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import type { DefineComponent } from 'vue'
-import navbar from './components/navbar.vue'
-</script>
-
 <template>
-  <div>
-       <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
-
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/pages">Pages</RouterLink>
-          <RouterLink to="/blocks">Blocks</RouterLink>
-        </nav>
-      </div>
-    </header>
-
-    <RouterView />
-
-  </div>
+    <header>Pedro</header>
 </template>
 
 <style scoped>
