@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PkpHub.Api.Models;
+using PkpHub.Api.Data;
 
 namespace PkpHub.Api.Controllers;
 

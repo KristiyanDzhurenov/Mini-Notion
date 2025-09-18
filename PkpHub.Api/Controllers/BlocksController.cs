@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PkpHub.Api.Data;
 
 [ApiController]
 [Route("api/[controller]")]

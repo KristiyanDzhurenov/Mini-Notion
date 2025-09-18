@@ -9,6 +9,8 @@ namespace PkpHub.Api.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
+        public DbSet<Page> Pages { get; set; }
+        public DbSet<Block> Blocks { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure your entities here if needed
@@ -16,13 +18,4 @@ namespace PkpHub.Api.Data
         }
 
     }
-
-}
-
-public class AppDbContext : DbContext
-{
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
-    public DbSet<Page> Pages { get; set; }
-    public DbSet<Block> Blocks { get; set; }
 }
