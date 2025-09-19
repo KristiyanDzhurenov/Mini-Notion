@@ -1,5 +1,7 @@
 <template>
-    <header>Pedro</header>
+    <header>
+      <h1>Pedro</h1>
+    </header>
 </template>
 
 <style scoped>
