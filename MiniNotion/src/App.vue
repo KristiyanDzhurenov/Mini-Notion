@@ -2,13 +2,35 @@
 import { RouterLink, RouterView } from 'vue-router'
 import type { DefineComponent } from 'vue'
 import navbar from './components/navbar.vue'
+import Sidebar from './components/Sidebar.vue'
+import SearchBar from './components/SearchBar.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import { ref } from 'vue'
+
+const isDark = ref(false)
+
+function toggleTheme() {
+  isDark.value = !isDark.value
+  document.documentElement.classList.toggle('dark', isDark.value)
+}
 </script>
 
 <template>
-  <div>
-       <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="flex">
+    <!-- Sidebar - показва се само н екрани md и нагоре -->
+     <SearchBar />
+     <Sidebаr class="hidden md:block" />
 
+     <!-- Основна част -->
+      <div class="flex-1 p-4">
+       <header class="flex justify-between items-center mb-4">
+        <!-- бутон за смяна на тема-->
+        <button @click="toggleTheme" class="p-2 border rounded">
+          Смени тема
+        </button>
+      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    </header>
+    
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
 
@@ -19,14 +41,31 @@ import navbar from './components/navbar.vue'
           <RouterLink to="/blocks">Blocks</RouterLink>
         </nav>
       </div>
-    </header>
+
 
     <RouterView />
 
+    </div>
   </div>
 </template>
 
 <style scoped>
+
+:root {
+  --bg: white;
+  --text: black;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #ffffff;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
 header {
   line-height: 1.5;
   max-height: 100vh;
