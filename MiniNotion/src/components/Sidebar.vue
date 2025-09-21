@@ -1,5 +1,5 @@
 <template>
-    <aside class="w-64 bg-gray-100 h-screen p-4">
+    <aside class="w-64 bg-gray-100 p-4">
         <h2 class="text-lg font-bold mb-2">Страници</h2>
         <ul>
             <li v-for="page in pages" :key="page.id" class="cursor-pointer hover:bg-gray-200 p-2 rounded">
@@ -11,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineComponent } from 'vue'
 import { ref } from 'vue'
 import { HomeIcon, ClipboardDocumentListIcon, PencilSquareIcon } from '@heroicons/vue/24/solid'
 

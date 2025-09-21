@@ -1,5 +1,5 @@
 <template>
-    <input v-model="query" type="text" placeholder="Търси..." class="w-full border p-2 rounded" />
+    <input v-model="query" type="text" placeholder="Търси..." class="" />
 </template>
 
 <script setup>

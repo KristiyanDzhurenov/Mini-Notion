@@ -3,8 +3,8 @@ import { RouterLink, RouterView } from 'vue-router'
 import type { DefineComponent } from 'vue'
 import navbar from './components/navbar.vue'
 import Sidebar from './components/Sidebar.vue'
-import SearchBar from './components/SearchBar.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
+import WelcomeItem from './components/WelcomeItem.vue'
 import { ref } from 'vue'
 
 const isDark = ref(false)
@@ -16,11 +16,14 @@ function toggleTheme() {
 </script>
 
 <template>
-  <div class="flex">
+  
+  <div class="">
+    
     <!-- Sidebar - показва се само н екрани md и нагоре -->
-     <SearchBar />
-     <Sidebаr class="hidden md:block" />
-
+     
+     <SearchBar />     
+     <Sidebar />
+     <navbar />
      <!-- Основна част -->
       <div class="flex-1 p-4">
        <header class="flex justify-between items-center mb-4">
@@ -28,18 +31,20 @@ function toggleTheme() {
         <button @click="toggleTheme" class="p-2 border rounded">
           Смени тема
         </button>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+      <img alt="Vue logo" class="logo flex justify-left items-left" src="@/assets/logo.svg" width="125" height="125" />
     </header>
+    
     
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
-
-        <nav>
+                <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
           <RouterLink to="/pages">Pages</RouterLink>
           <RouterLink to="/blocks">Blocks</RouterLink>
         </nav>
+        <TheWelcome />
+        <WelcomeItem />
       </div>
 
 

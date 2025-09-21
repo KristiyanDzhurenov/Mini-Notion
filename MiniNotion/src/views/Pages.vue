@@ -1,9 +1,10 @@
-<template>
-    <header>
-      <h1>Pedro</h1>
-    </header>
-</template>
 
+
+<template>
+  <main>
+    <TheWelcome/>
+  </main>
+</template>
 <style scoped>
 header {
   line-height: 1.5;

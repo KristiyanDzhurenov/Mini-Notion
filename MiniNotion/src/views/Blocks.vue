@@ -1,11 +1,10 @@
+
+
 <template>
-    <header>
-        <div>
-
-        </div>
-    </header>
+  <main>
+    <TheWelcome/>
+  </main>
 </template>
-
 <style scoped>
 header {
   line-height: 1.5;
