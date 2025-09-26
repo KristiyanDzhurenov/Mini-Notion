@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import type { DefineComponent } from 'vue'
-import navbar from './components/navbar.vue'
-import Sidebar from './components/Sidebar.vue'
+import Navbar from './components/Navbar.vue'
+// import Sidebar from './components/Sidebar.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import WelcomeItem from './components/WelcomeItem.vue'
+import Login from './views/Login.vue'
+import Register from './views/Register.vue'
 import { ref } from 'vue'
 
 const isDark = ref(false)
@@ -20,10 +22,11 @@ function toggleTheme() {
   <div class="">
     
     <!-- Sidebar - показва се само н екрани md и нагоре -->
-     
+     <Login />
+     <Register />
      <SearchBar />     
-     <Sidebar />
-     <navbar />
+     <!-- <Sidebar /> -->
+     <Navbar />
      <!-- Основна част -->
       <div class="flex-1 p-4">
        <header class="flex justify-between items-center mb-4">
@@ -34,6 +37,12 @@ function toggleTheme() {
       <img alt="Vue logo" class="logo flex justify-left items-left" src="@/assets/logo.svg" width="125" height="125" />
     </header>
     
+      <div class="flex justify-right items-right">
+        <nav>
+          <RouterLink to="/login">Login</RouterLink>
+          <RouterLink to="/register">Register</RouterLink>
+        </nav>
+      </div>
     
       <div class="wrapper">
         <HelloWorld msg="You did it!" />

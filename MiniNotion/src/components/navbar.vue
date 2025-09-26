@@ -1,11 +1,21 @@
 <template>
     <header width="100%" height="60px" class="main-hdr">
-        <div width="100%" height="100%" class="hdr-main-div">
-            <div width="fit-content" height="100%" class="hdr-div">
-                <button class="hdr-btn">MiniNotion</button>
+        <div width="100%" height="100%" class="hdr-main-div flex justify-between items-center w-full h-full px-4">
+        
+                <div class="hdr-div">
+                <button class="hdr-btn" @click="$router.push('/')">MiniNotion</button>
+                </div>
+
+
+            <div class="hdr-div"></div>
+            <div class="hdr-div flex gap-2">
+                <RouterLink to ="/login"></RouterLink>
+                    <button class="hdr-btn" @click="$router.push('/login')">Login</button>
+                <RouterLink to="/register"></RouterLink>
+                    <button class="hdr-btn" @click="$router.push('/register') ">Register</button>
+            <div width="fit-content" height="100%" class="hdr-div"></div>
+            <div width="fit-content" height="100%" class="hdr-div"></div>
             </div>
-            <div width="fit-content" height="100%" class="hdr-div">123</div>
-            <div width="fit-content" height="100%" class="hdr-div">123</div>
         </div>
     </header>
 </template>
